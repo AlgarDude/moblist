@@ -10,7 +10,7 @@ local spawns = {}
 local running = true
 local myName = mq.TLO.Me.DisplayName()
 local window_flags = bit32.bor(ImGuiWindowFlags.None)
-local treeview_table_flags = bit32.bor(ImGuiTableFlags.Reorderable, ImGuiTableFlags.Hideable, ImGuiTableFlags.RowBg,
+local treeview_table_flags = bit32.bor(ImGuiTableFlags.Reorderable, ImGuiTableFlags.Hideable,
     ImGuiTableFlags.Borders, ImGuiTableFlags.Resizable, ImGuiTableFlags.Sortable, ImGuiTableFlags.ScrollY)
 local openGUI, drawGUI = true, true
 local angle = 0
@@ -48,13 +48,13 @@ local filter = {
     ['Body'] = '',
     ['Race'] = '',
     ['Class'] = '',
-    ['Type'] = { 'PC', 'NPC', 'Untargetable', 'Mount', 'Pet', 'Corpse', 'Chest', 'Trigger', 'Trap', 'Timer', 'Item', 'Mercenary', 'Aura', 'Object', 'Banner', 'Campfire', 'Flyer' },
+    ['Type'] = { 'PC', 'NPC', 'Untargetable', 'Mount', 'Pet', 'Corpse', 'Chest', 'Trigger', 'Trap', 'Timer', 'Item', 'Mercenary', 'Aura', 'Object', 'Banner', 'Campfire', 'Flyer', },
     ['Type_Selected'] = 2,
     ['name_reverse'] = false,
     ['body_reverse'] = false,
     ['race_reverse'] = false,
     ['class_reverse'] = false,
-    ['conColor'] = true
+    ['conColor'] = true,
 }
 
 defaultSettings = {
